@@ -29,14 +29,11 @@ spec:
         instance: api-tester-2121
         version: 1.0.0
     spec:
-      tolerations:
-      - key: node-role.kubernetes.io/control-plane
-        effect: NoSchedule
       nodeSelector:
         kubernetes.io/hostname: k8s-master
       containers:
         - name: api-tester-2121
-          image: 1pro/api-tester:v1.0.0
+          image: hkh8308/api-tester:v1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
