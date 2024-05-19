@@ -29,6 +29,11 @@ spec:
         instance: api-tester-2121
         version: 1.0.0
     spec:
+      tolerations:
+      - key: node-role.kubernetes.io
+        operator: Equal
+        value: control-plane
+        effect: NoSchedule
       nodeSelector:
         kubernetes.io/hostname: k8s-master
       containers:
