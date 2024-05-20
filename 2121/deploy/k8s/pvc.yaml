@@ -22,5 +22,3 @@ spec:
       component: backend-server
       name: api-tester
       instance: api-tester-2121-files
-      version: 1.0.0
-      managed-by: kubectl
